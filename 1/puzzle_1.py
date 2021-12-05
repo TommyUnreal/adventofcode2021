@@ -8,9 +8,9 @@ with open(os.path.join(__location__,"input.txt")) as file:
     line_last = int(file.readline().strip())
     line = 0 + line_last
     while line:
-        num = file.readline().strip()
-        if num.isdigit():
-            line = int(num)
+        line = file.readline().strip()
+        if line.isdigit():
+            line = int(line)
             if line > line_last:
                 n += 1
             line_last = line
